@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Example Site on Xiaoxiao Wu</title>
-    <link>https://localhost:1313/zh/docs/example/</link>
+    <link>https://eesissi.com/zh/docs/example/</link>
     <description>Recent content in Example Site on Xiaoxiao Wu</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://localhost:1313/zh/docs/example/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://eesissi.com/zh/docs/example/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://localhost:1313/zh/docs/example/Current-Courses/</link>
+      <link>https://eesissi.com/zh/docs/example/Current-Courses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/zh/docs/example/Current-Courses/</guid>
+      <guid>https://eesissi.com/zh/docs/example/Current-Courses/</guid>
       <description>week1#content:
  Data cleaning.pdf emsenble learning.pdf catboost.pdf classfication code data cleaning code  链接: https://pan.baidu.com/s/11T1Pqk4qBNI4WKCW_5rSoQ 密码: p58d
 week2#content:
@@ -19,39 +19,39 @@ week2#content:
     
     <item>
       <title></title>
-      <link>https://localhost:1313/zh/docs/example/hidden/</link>
+      <link>https://eesissi.com/zh/docs/example/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/zh/docs/example/hidden/</guid>
+      <guid>https://eesissi.com/zh/docs/example/hidden/</guid>
       <description>This page is hidden in menu#Quondam non pater est dignior ille Eurotas#Latent te facies#Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
  Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona#O fallor in sustinui iussorum equidem.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://localhost:1313/zh/docs/example/members/</link>
+      <link>https://eesissi.com/zh/docs/example/members/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/zh/docs/example/members/</guid>
+      <guid>https://eesissi.com/zh/docs/example/members/</guid>
       <description>Group Members#研究生# 2016级：骆彧雯 2017级：陈诗辉，邹新宇 2018级：黄豪杰，杨晓逵 2019级：吴梓贤，黎嘉盈 2020级：张宁圻，朱伟林，刘金钰  博士生# 李刚强  博士后# Asif Muhammad  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://localhost:1313/zh/docs/example/publication/</link>
+      <link>https://eesissi.com/zh/docs/example/publication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/zh/docs/example/publication/</guid>
+      <guid>https://eesissi.com/zh/docs/example/publication/</guid>
       <description>Publications#Journal Papers
  S. X. Wu, Z. Wu, S. Chen, G. Li and S. Zhang, &amp;ldquo;Community Detection in Blockchain Social Networks,&amp;rdquo; in Journal of Communications and Information Networks, vol. 6, no. 1, pp. 59-71, March 2021 Q. Li, S. X. Wu, S. Wang and J. Lin, “Joint Uplink/Downlink Discrete Sum Rate Maximization for Full-Duplex Multicell Heterogeneous Networks,” IEEE Transactions on TVT, vol.69, no.3, pp.2758-2770, 2020 G. Li, S.</description>
     </item>
     
     <item>
       <title>Project</title>
-      <link>https://localhost:1313/zh/docs/example/project/</link>
+      <link>https://eesissi.com/zh/docs/example/project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/zh/docs/example/project/</guid>
+      <guid>https://eesissi.com/zh/docs/example/project/</guid>
       <description>1. 基于“关键意见领袖”（KOL）的社交网络的建模#图1:基于“关键意见领袖的” 社交网络模型项目说明：本项目基于互联网社交网络平台的KOL用户模型，用科学的手段提取大型复杂网络中不同类型用户的行为特征参数，研究网络中的信息传递效应。KOL网络模型将提供解析的方法挖掘互联网社交平台中用户之间的相互影响关系，进而控制信息传播途径，识别特殊用户和假消息。
 2. 分布式计算网络中内部恶意攻击的检测与定位# 图 2：分布式物联网在被内部恶意节点入侵时具备明显的KOL网络特征项目说明：分布式计算的多主体算法对于解决处理高维数据的问题至关重要，而且随着技术从自治系统过渡到群体智能仿真，这些算法有望在需要信息融合的机器人应用中获得更大的重视。尽管在大多数分布式信息处理算法实例（特别是以对等方式工作的算法）中都建立了容错能力，但由于这些方法依赖于共识约束来确保与网络的融合，因此这些方法面临数据注入攻击的威胁。全局最优，代表推理或决策。事实证明，攻击者可能会利用共识机制将网络引导到不需要的最终结果。该项目的目的是提供有关如何设计多智能体算法的防御指南，提高网络对多种攻击的免疫力。
 3. 轨迹网络建模与分析#图 3：轨迹网络与社交属性项目说明：用户的出行与社交习惯密切相关，因此交通用户轨迹网络具备社交属性。对交通网络进行用户轨迹特征提取和KOL建模，使我们能够对每一个交通网络用户进行画像。从而在安防或疫情防控等重大事件发生时，预先进行人流监控，交通传播预测，以及追踪潜在超级传播者。
