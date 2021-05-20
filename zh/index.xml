@@ -86,7 +86,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://eesissi.com/zh/docs/example/Current-Courses/</guid>
-      <description>2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#**课题名称：**4G 手机辐射源数据分析
+      <description>2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#课题名称：4G 手机辐射源数据分析
 课题背景：
 辐射源识别一直是研究的热点，移动智能手机在日常生活中是最为广泛使用的一种无线通信 设备，我们的所有操作几乎都可以且需要在手机上完成，因此，对于智能手机的正确识别与身份 认证是具有重要的研究意义的，而且我国人口众多，智能手机应用数量大，建立一套完整有效的 识别认证系统是必要的。智能手机的工作是依赖于电子元器件的正常运作，而每个电子元器件的 参数绝大不可能完全相同，这样对于手机的射频信号的影响就会不同，这里的影响会体现在手机 发射的射频上，我们称之为手机信号的“指纹”信息，我们认为手机信号是存在可识别的信息的， 这种信息就和人类的指纹类似，具有可区分性和科研学术界对此问题的定义为射频识别 RAI(Radiometric identification)或者是特殊发射器识别 SEI(Special emitter identification)，因此这就 为正确识别认证智能手机提供了可能性。
 课题任务：

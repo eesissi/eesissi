@@ -5,7 +5,7 @@
   <meta name="generator" content="Hugo 0.82.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#**课题名称：**4G 手机辐射源数据分析
+<meta name="description" content="2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#课题名称：4G 手机辐射源数据分析
 课题背景：
 辐射源识别一直是研究的热点，移动智能手机在日常生活中是最为广泛使用的一种无线通信 设备，我们的所有操作几乎都可以且需要在手机上完成，因此，对于智能手机的正确识别与身份 认证是具有重要的研究意义的，而且我国人口众多，智能手机应用数量大，建立一套完整有效的 识别认证系统是必要的。智能手机的工作是依赖于电子元器件的正常运作，而每个电子元器件的 参数绝大不可能完全相同，这样对于手机的射频信号的影响就会不同，这里的影响会体现在手机 发射的射频上，我们称之为手机信号的“指纹”信息，我们认为手机信号是存在可识别的信息的， 这种信息就和人类的指纹类似，具有可区分性和科研学术界对此问题的定义为射频识别 RAI(Radiometric identification)或者是特殊发射器识别 SEI(Special emitter identification)，因此这就 为正确识别认证智能手机提供了可能性。
 课题任务：
@@ -21,7 +21,7 @@ https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=shari
   第一, 二周#content:
  Data cleaning.pdf emsenble learning.pdf catboost.pdf classfication code data cleaning code  链接: https://pan.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#**课题名称：**4G 手机辐射源数据分析
+<meta property="og:description" content="2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#课题名称：4G 手机辐射源数据分析
 课题背景：
 辐射源识别一直是研究的热点，移动智能手机在日常生活中是最为广泛使用的一种无线通信 设备，我们的所有操作几乎都可以且需要在手机上完成，因此，对于智能手机的正确识别与身份 认证是具有重要的研究意义的，而且我国人口众多，智能手机应用数量大，建立一套完整有效的 识别认证系统是必要的。智能手机的工作是依赖于电子元器件的正常运作，而每个电子元器件的 参数绝大不可能完全相同，这样对于手机的射频信号的影响就会不同，这里的影响会体现在手机 发射的射频上，我们称之为手机信号的“指纹”信息，我们认为手机信号是存在可识别的信息的， 这种信息就和人类的指纹类似，具有可区分性和科研学术界对此问题的定义为射频识别 RAI(Radiometric identification)或者是特殊发射器识别 SEI(Special emitter identification)，因此这就 为正确识别认证智能手机提供了可能性。
 课题任务：
@@ -168,12 +168,12 @@ https://github.com/alex-shpak/hugo-book
   高级编程期末作业
   <a class="anchor" href="#%e9%ab%98%e7%ba%a7%e7%bc%96%e7%a8%8b%e6%9c%9f%e6%9c%ab%e4%bd%9c%e4%b8%9a">#</a>
 </h2>
-<p>**课题名称：**4G 手机辐射源数据分析</p>
-<p><strong>课题背景：</strong></p>
+<p><strong>课题名称</strong>：4G 手机辐射源数据分析</p>
+<p><strong>课题背景</strong>：</p>
 <p>辐射源识别一直是研究的热点，移动智能手机在日常生活中是最为广泛使用的一种无线通信 设备，我们的所有操作几乎都可以且需要在手机上完成，因此，对于智能手机的正确识别与身份 认证是具有重要的研究意义的，而且我国人口众多，智能手机应用数量大，建立一套完整有效的 识别认证系统是必要的。智能手机的工作是依赖于电子元器件的正常运作，而每个电子元器件的 参数绝大不可能完全相同，这样对于手机的射频信号的影响就会不同，这里的影响会体现在手机 发射的射频上，我们称之为手机信号的“指纹”信息，我们认为手机信号是存在可识别的信息的， 这种信息就和人类的指纹类似，具有可区分性和科研学术界对此问题的定义为射频识别 RAI(Radiometric identification)或者是特殊发射器识别 SEI(Special emitter identification)，因此这就 为正确识别认证智能手机提供了可能性。</p>
-<p><strong>课题任务：</strong></p>
+<p><strong>课题任务</strong>：</p>
 <p>课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。</p>
-<p><strong>详细的数据说明文件请下载文件：</strong>
+<p><strong>详细的数据说明文件请下载文件</strong>：
   <a href="https://gitee.com/eesissi123/data/raw/master/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A.pdf">高级编程数据说明</a>，请仔细阅读该文件！！！</p>
 <p><strong>数据文件说明</strong>：</p>
 <ul>
