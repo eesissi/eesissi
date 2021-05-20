@@ -11,10 +11,21 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://eesissi.com/zh/docs/example/Current-Courses/</guid>
-      <description>2020/2021春季：高级编程：项目设计与实现#第一周#content:
- Data cleaning.pdf emsenble learning.pdf catboost.pdf classfication code data cleaning code  链接: https://pan.baidu.com/s/11T1Pqk4qBNI4WKCW_5rSoQ 密码: p58d
-第二周#content:
- uber data processing.pdf  链接: https://pan.baidu.com/s/10GB0B5I0miej5rGYXnYoJg 密码: gi2d</description>
+      <description>2020/2021春季：高级编程：项目设计与实现#高级编程期末作业#**课题名称：**4G 手机辐射源数据分析
+课题背景：
+辐射源识别一直是研究的热点，移动智能手机在日常生活中是最为广泛使用的一种无线通信 设备，我们的所有操作几乎都可以且需要在手机上完成，因此，对于智能手机的正确识别与身份 认证是具有重要的研究意义的，而且我国人口众多，智能手机应用数量大，建立一套完整有效的 识别认证系统是必要的。智能手机的工作是依赖于电子元器件的正常运作，而每个电子元器件的 参数绝大不可能完全相同，这样对于手机的射频信号的影响就会不同，这里的影响会体现在手机 发射的射频上，我们称之为手机信号的“指纹”信息，我们认为手机信号是存在可识别的信息的， 这种信息就和人类的指纹类似，具有可区分性和科研学术界对此问题的定义为射频识别 RAI(Radiometric identification)或者是特殊发射器识别 SEI(Special emitter identification)，因此这就 为正确识别认证智能手机提供了可能性。
+课题任务：
+课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。
+详细的数据说明文件请下载文件：高级编程数据说明，请仔细阅读该文件！！！
+数据文件说明：
+ train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小2G，因文件太大，这里先提供百度网盘下载方式
+数据下载：
+  下载方式1：百度网盘下载，有会员的可以考虑此方式
+链接: https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w 密码: wja6
+  下载方式2：google drive，如果有梯子，可以考虑此下载方式，点击链接下载
+https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing
+  第一, 二周#content:
+ Data cleaning.pdf emsenble learning.pdf catboost.pdf classfication code data cleaning code  链接: https://pan.</description>
     </item>
     
     <item>
