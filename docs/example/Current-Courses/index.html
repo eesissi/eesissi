@@ -12,13 +12,13 @@
 课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。
 详细的数据说明文件请下载文件：高级编程数据说明，请仔细阅读该文件！！！
 数据文件说明：
- train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小2G，因文件太大，这里先提供百度网盘下载方式
+ train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
 数据下载：
-  下载方式1：百度网盘下载，有会员的可以考虑此方式
-链接: https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w 密码: wja6
-  下载方式2：google drive，如果有梯子，可以考虑此下载方式，点击链接下载
-https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing
-  第一, 二周#content:">
+  下载方式1（推荐）：点击下载
+  下载方式2：百度网盘下载 密码: wja6
+  下载方式3：Google Drive
+  结果提交说明：
+利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
 <meta property="og:description" content="2020/2021 Spring Term：Advanced Programming：project design and implementation#高级编程期末作业#课题名称：4G 手机辐射源数据分析
 课题背景：
@@ -27,13 +27,13 @@ https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=shari
 课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。
 详细的数据说明文件请下载文件：高级编程数据说明，请仔细阅读该文件！！！
 数据文件说明：
- train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小2G，因文件太大，这里先提供百度网盘下载方式
+ train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
 数据下载：
-  下载方式1：百度网盘下载，有会员的可以考虑此方式
-链接: https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w 密码: wja6
-  下载方式2：google drive，如果有梯子，可以考虑此下载方式，点击链接下载
-https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing
-  第一, 二周#content:" />
+  下载方式1（推荐）：点击下载
+  下载方式2：百度网盘下载 密码: wja6
+  下载方式3：Google Drive
+  结果提交说明：
+利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://eesissi.com/docs/example/Current-Courses/" /><meta property="article:section" content="docs" />
 
@@ -180,18 +180,25 @@ https://github.com/alex-shpak/hugo-book
 <li>test 测试集</li>
 <li>label and phone.csv  真实手机类别和数据标签的对应关系文件</li>
 </ul>
-<p>数据大小2G，因文件太大，这里先提供百度网盘下载方式</p>
+<p>数据大小1.5G</p>
 <p><strong>数据下载</strong>：</p>
 <ul>
 <li>
-<p>下载方式1：百度网盘下载，有会员的可以考虑此方式</p>
-<p>链接: <a href="https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w">https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w</a>  密码: wja6</p>
+<p>下载方式1（推荐）：
+  <a href="https://gjbc-data-1302191775.cos.ap-shenzhen-fsi.myqcloud.com/gjbc.zip">点击下载</a></p>
 </li>
 <li>
-<p>下载方式2：google drive，如果有梯子，可以考虑此下载方式，点击链接下载</p>
-<p><a href="https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing">https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing</a></p>
+<p>下载方式2：
+  <a href="https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w">百度网盘下载</a>    密码: wja6</p>
+</li>
+<li>
+<p>下载方式3：
+  <a href="https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing">Google Drive</a></p>
 </li>
 </ul>
+<p><strong>结果提交说明</strong>：</p>
+<p>利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。</p>
+<p><strong>注：1.所提交的测试集标签预测结果格式为 csv 文件或者 npy 文件均可； 2.该手机数据具有版权信息，具有私密性，未经许可，不可擅自外泄。</strong></p>
 <h2 id="第一-二周">
   第一, 二周
   <a class="anchor" href="#%e7%ac%ac%e4%b8%80-%e4%ba%8c%e5%91%a8">#</a>
