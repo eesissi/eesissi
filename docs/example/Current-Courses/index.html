@@ -16,7 +16,7 @@
  train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
 数据下载：
  下载方式1：百度网盘下载 密码: wja6 下载方式2：Google Drive ps: 需要连接国外网络，但下载速度快  结果提交说明：
-利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。">
+ 利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
 <meta property="og:description" content="2020/2021 Spring Term：Advanced Programming：project design and implementation#高级编程期末作业#课题名称：4G 手机辐射源数据分析
 课题背景：
@@ -29,7 +29,7 @@
  train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
 数据下载：
  下载方式1：百度网盘下载 密码: wja6 下载方式2：Google Drive ps: 需要连接国外网络，但下载速度快  结果提交说明：
-利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。" />
+ 利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://eesissi.com/docs/example/Current-Courses/" /><meta property="article:section" content="docs" />
 
@@ -191,8 +191,43 @@ https://github.com/alex-shpak/hugo-book
   <a href="https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing">Google Drive</a>    ps: 需要连接国外网络，但下载速度快</li>
 </ul>
 <p><strong>结果提交说明</strong>：</p>
+<blockquote>
 <p>利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。</p>
 <p><strong>注：1.所提交的测试集标签预测结果格式为 csv 文件或者 npy 文件均可； 2.该手机数据具有版权信息，具有私密性，未经许可，不可擅自外泄。</strong></p>
+</blockquote>
+<p><strong>结果提交方式</strong>：</p>
+<blockquote>
+<p>评分系统是为了模拟真实的比赛环境，同时也方便大家可以查看自己的模型训练效果，下面介绍下评分系统的使用说明，减轻大家的学习负担：</p>
+<p>说明：大家在使用评分系统前，先为自己的小组创建一个战队名，如：eesissi，战队名不能和其他小组的战队名重复，提交必须使用这个战队名提交。</p>
+<p><strong>第一步</strong>：访问 https:www.kaggle.com/创建一个kaggle账号，账号名设置为自己的战队名</p>
+<p><strong>第二步</strong>：创建好账号后，请大家点击链接 <a href="https://www.kaggle.com/t/46b3e3c55cb2488f9798805b3ed75548">https://www.kaggle.com/t/46b3e3c55cb2488f9798805b3ed75548</a></p>
+<p><strong>第三步</strong>：点击右上角的join competition加入比赛</p>
+<p><strong>第五步</strong>：提交结果</p>
+<p>提交说明：</p>
+<ul>
+<li>
+<p>每人最多每天可以提交结果20次</p>
+</li>
+<li>
+<p>提交的结果必须是csv文件，csv文件中必须有两个columns，其中一个columns的名字为Id，另一个名字为Category</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>下面是提交代码的范例：</p>
+<pre><code>import pandas as pd
+import numpy as np
+
+# solution 是你⾃⼰模型的预测结果, 我这⾥随机⽣成的⼀个预测结果
+solution = np.random.randint(10, size=23403)
+
+# 下⾯代码会⽣成提交的⽂件, 将numpy⽂件转换成csv⽂件
+pd.DataFrame({'Id':range(len(solution)), &gt;'Category':solution}).to_csv('solution.csv',
+index=False)
+
+# 查看预测结果, 检查提交格式是否正确
+pd.read_csv('solution.csv')
+</code></pre></blockquote>
 <p><strong>考核标准</strong>:</p>
 <ol>
 <li>

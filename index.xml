@@ -97,7 +97,7 @@ Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii.
  train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
 数据下载：
  下载方式1：百度网盘下载 密码: wja6 下载方式2：Google Drive ps: 需要连接国外网络，但下载速度快  结果提交说明：
-利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。</description>
+ 利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。</description>
     </item>
     
     <item>
