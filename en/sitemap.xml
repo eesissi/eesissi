@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://eesissi.com/docs/example/</loc>
     <xhtml:link
@@ -13,7 +14,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/table-of-contents/with-toc/</loc>
     <xhtml:link
                 rel="alternate"
@@ -25,7 +28,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/table-of-contents/with-toc/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/table-of-contents/without-toc/</loc>
     <xhtml:link
                 rel="alternate"
@@ -37,7 +42,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/table-of-contents/without-toc/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/posts/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -50,7 +57,9 @@
                 hreflang="en"
                 href="https://eesissi.com/posts/creating-a-new-theme/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/posts/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -63,7 +72,9 @@
                 hreflang="en"
                 href="https://eesissi.com/posts/migrate-from-jekyll/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/table-of-contents/</loc>
     <xhtml:link
                 rel="alternate"
@@ -75,7 +86,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/table-of-contents/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/collapsed/</loc>
     <xhtml:link
                 rel="alternate"
@@ -87,7 +100,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/collapsed/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/posts/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -100,7 +115,9 @@
                 hreflang="en"
                 href="https://eesissi.com/posts/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -113,7 +130,9 @@
                 hreflang="en"
                 href="https://eesissi.com/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/posts/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -126,7 +145,9 @@
                 hreflang="en"
                 href="https://eesissi.com/posts/goisforlovers/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/categories/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -139,7 +160,9 @@
                 hreflang="en"
                 href="https://eesissi.com/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/categories/Development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -152,7 +175,9 @@
                 hreflang="en"
                 href="https://eesissi.com/categories/Development/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -165,7 +190,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/development/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/posts/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -178,7 +205,9 @@
                 hreflang="en"
                 href="https://eesissi.com/posts/hugoisforlovers/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -191,7 +220,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/go/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -204,7 +235,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/golang/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -217,7 +250,9 @@
                 hreflang="en"
                 href="https://eesissi.com/categories/golang/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -230,7 +265,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/hugo/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -243,7 +280,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -256,7 +295,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/templates/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/tags/themes/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -269,7 +310,9 @@
                 hreflang="en"
                 href="https://eesissi.com/tags/themes/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/collapsed/3rd-level/4th-level/</loc>
     <xhtml:link
                 rel="alternate"
@@ -281,7 +324,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/collapsed/3rd-level/4th-level/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/collapsed/3rd-level/</loc>
     <xhtml:link
                 rel="alternate"
@@ -293,7 +338,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/collapsed/3rd-level/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/Current-Courses/</loc>
     <xhtml:link
                 rel="alternate"
@@ -305,7 +352,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/Current-Courses/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/hidden/</loc>
     <xhtml:link
                 rel="alternate"
@@ -317,7 +366,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/hidden/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/members/</loc>
     <xhtml:link
                 rel="alternate"
@@ -329,7 +380,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/members/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/publication/</loc>
     <xhtml:link
                 rel="alternate"
@@ -341,7 +394,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/example/publication/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/shortcodes/section/</loc>
     <xhtml:link
                 rel="alternate"
@@ -353,7 +408,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/shortcodes/section/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/shortcodes/section/page1/</loc>
     <xhtml:link
                 rel="alternate"
@@ -365,7 +422,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/shortcodes/section/page1/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/shortcodes/section/page2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -377,7 +436,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/shortcodes/section/page2/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/</loc>
     <xhtml:link
                 rel="alternate"
@@ -389,7 +450,9 @@
                 hreflang="en"
                 href="https://eesissi.com/docs/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://eesissi.com/docs/example/project/</loc>
     <xhtml:link
                 rel="alternate"
@@ -402,4 +465,5 @@
                 href="https://eesissi.com/docs/example/project/"
                 />
   </url>
+  
 </urlset>
