@@ -295,8 +295,28 @@
                 />
   </url><url>
     <loc>https://eesissi.com/docs/example/course1/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://eesissi.com/zh/docs/example/course1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eesissi.com/docs/example/course1/"
+                />
   </url><url>
     <loc>https://eesissi.com/docs/example/course2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://eesissi.com/zh/docs/example/course2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eesissi.com/docs/example/course2/"
+                />
   </url><url>
     <loc>https://eesissi.com/docs/example/Current-Courses/</loc>
     <xhtml:link
