@@ -162,6 +162,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#工具依赖和前置准备">工具、依赖和前置准备</a></li>
             <li><a href="#模型选择">模型选择</a></li>
             <li><a href="#部署与配置">部署与配置</a></li>
+            <li><a href="#参数">参数</a></li>
           </ul>
         </li>
       </ul>
@@ -542,6 +543,94 @@ huggingface-cli login
 <p>如果你总是遇到格式报错，不妨看看示例数据集，找找与你的数据集格式相近的，在 dataset_info.json 复制它们的描述信息，然后在此基础上修改。</p>
 <p>另外在文件末尾添加描述时，别忘了最后一段描述是没有逗号的，如果采用复制的方式，有时会需要注意删除逗号（因为中部的每段都有逗号）</p>
 </blockquote>
+<h4 id="启动web-ui">
+  启动Web-UI
+  <a class="anchor" href="#%e5%90%af%e5%8a%a8web-ui">#</a>
+</h4>
+<p>LLaMA-Factory的大部分基本参数都在Web- UI中可调，因此在这里我们主要只使用Web-UI，而不赘述命令行的使用</p>
+<p>LLaMA-Factory的前端界面是基于Gradio构建的，ModelScope在云实例中提供了在可直接访问的Localhost（这样你就不用自己去添加域名反代），但是要在这里正常使用Gradio，我们需要对环境变量做一些处理。</p>
+<blockquote>
+<p>如果你不作处理直接进入，那么很可能会丢失Gradio的前端样式</p>
+<p>如果你使用的是自己的设备，则可以完全忽略这一步，直接使用 <code>llamafactory-cli webui</code> 命令启动即可</p>
+</blockquote>
+<p>如果你碰到了问题，ModelScope给出的解决办法是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-BASH" data-lang="BASH"><span style="color:#75715e"># dsw-xxx 需要改为具体的实例 id，7860 为 gradio 运行的端口号</span>
+export GRADIO_ROOT_PATH<span style="color:#f92672">=</span>/dsw-xxx/proxy/7860/
+</code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># dsw-xxx 需要改为具体的实例 id，7860 为 gradio 运行的端口号</span>
+demo.launch<span style="color:#f92672">(</span>root_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/dsw-xxx/proxy/7860/&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>图5</p>
+<p>如图，我这里的实例ID为791024，LLaMA-Factory给我的启动端口是7860（其实默认就是7860），那么我就应该在终端输入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export GRADIO_ROOT_PATH<span style="color:#f92672">=</span>/dsw-791024/proxy/7860/
+</code></pre></div><p>然后再使用下面的命令启动Web-UI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">llamafactory-cli webui
+</code></pre></div><p>祝贺你！到了这一步，我们已经完成了部署LLaMA-Factory，可以正式开始准备训练模型了✌️</p>
+<h3 id="参数">
+  参数
+  <a class="anchor" href="#%e5%8f%82%e6%95%b0">#</a>
+</h3>
+<p>打开Web-UI界面，这里有非常多可以调节的参数</p>
+<h4 id="微调方法">
+  微调方法
+  <a class="anchor" href="#%e5%be%ae%e8%b0%83%e6%96%b9%e6%b3%95">#</a>
+</h4>
+<p>LoRA、Freeze 和 Full 是三种常见的微调方法，它们各自适用于不同的场景。</p>
+<p>LoRA （Low-Rank Adaptation）是一种参数高效微调方法，它通过插入小型可训练的低秩矩阵到模型的权重中，减少了需要更新的参数量。它的特点是：参数量小，仅需训练插入的低秩矩阵，而原模型权重保持冻结；计算资源需求低，显著节省显存和计算量；迁移性强，因为LoRA 参数可以轻松添加到原始模型中，而不需要改变原始模型；训练速度快，因为需要更新的参数少。</p>
+<p>Freeze 则是将预训练模型的大部分参数冻结，仅解冻部分层（通常是顶层或特定模块）进行微调。它的参数量中等，相比 LoRA，需要微调的参数更多，但远少于 Full 微调。它可以保留预训练知识，冻结大部分参数避免过度拟合小数据集。此外灵活性强，可以选择解冻不同的层数或模块以适应任务需求。</p>
+<p>Full 微调则是对预训练模型的所有参数进行训练更新。因此它参数量大，因为所有参数都参与训练，因此显存占用和计算需求较高；定制化能力强：适合彻底适配一个模型到新任务或领域。但可能丢失泛化能力：如果数据量不足，容易出现过拟合。</p>
+<p>我们针对自身状况来考虑🤔：（仅对于我们最开始提交的模型v1.1而言）</p>
+<ol>
+<li>
+<p>时间和算力资源都非常稀缺，数据集的量也不够庞大</p>
+</li>
+<li>
+<p>不用大幅改变原模型的能力，只需改变它的角色立场和语言风格，以及添加部分知识</p>
+</li>
+<li>
+<p>我们不希望训练出来的Trump是个傻子，只会按数据集说话，应当保留原模型的常规知识和一定泛化能力</p>
+</li>
+</ol>
+<p>综合来看，Lora是最适合我们的选择</p>
+<h4 id="量化">
+  量化
+  <a class="anchor" href="#%e9%87%8f%e5%8c%96">#</a>
+</h4>
+<p>LLaMA-Factory支持量化训练的功能（QLora），none、8 和 4 代表不同的量化等级，主要是指量化过程中模型参数精度的降低程度。目的是减小模型的大小，减少计算资源的消耗，并提高推理速度。不同的量化等级有不同的精度和性能权。</p>
+<p>None指不启用量化，模型保持原始的浮动精度（通常是32位浮动点数）。也就是没有任何精度损失</p>
+<p>8 bit量化会将模型的权重和激活函数转换为8位整数（通常是 int8），能够显著减少内存占用（我们测试大约原始模型的1/4）</p>
+<p>4 bit量化会将模型的权重和激活函数转换为4位整数（通常是 int4）。能够进一步减少内存占用（我们测试约原始模型的1/8）</p>
+<p>如果资源足够，肯定选择None不量化啊😭。但是我们发现如果不量化，时间成本将变的难以接受（其实只是赶不上DDL）。随后我们又测试其他两种量化规格，发现4bit量化训练虽然快，但效果十分不理想。而8bit量化的模型回答质量基本没有明显下降。</p>
+<p>所以我们选择None + 8bit结合的方式，大部分数据集都采用8bit量化训练，有一些比较小的数据集（比如identity），就不进行量化。</p>
+<blockquote>
+<p>ps：目前已经没有这个烦恼了，感谢吴晓晓老师提供的4090和A100，我们仍在持续更新模型中&hellip;</p>
+</blockquote>
+<h4 id="量化方法">
+  量化方法
+  <a class="anchor" href="#%e9%87%8f%e5%8c%96%e6%96%b9%e6%b3%95">#</a>
+</h4>
+<p>Bitsandbytes、hqq 和 eetq，这仨在量化的策略、实现和适用场景上有所不同。</p>
+<p>BitsAndBytes 是Hugging Face的一个开源库，用于在不牺牲太多性能的情况下执行高效的量化，特别是针对大规模预训练模型（如 GPT、BERT 等）的量化。它特别擅长通过优化的低秩近似和稀疏技术来提高量化效率。主要方式是“后训练量化”（post-training quantization），适合用于已经训练好的模型。也就是说很适合用于在已有模型上进行微调的场景。</p>
+<p>HQQ (High-Quality Quantization)是一种高质量量化方法，重点在于通过先进的数学和统计技术来减少量化对模型性能的影响。它通过更加精细的策略来量化模型的权重。关注高精度量化的细节，力求在压缩模型的同时尽量减少精度损失。
+该方法通常使用更复杂的量化算法，如基于误差的量化（error feedback），并且优化量化过程中的梯度传播。
+它比较适合对精度要求较高的推理任务，比如需要对话理解、机器翻译等复杂任务。当模型压缩后需要保持较高精度，尤其在数据量较小或者推理任务精度要求较高时。</p>
+<p>EETQ (Efficient Error-Tracing Quantization)是一种专门用于量化大模型的高效方法，它的核心思想是通过对量化过程中的误差传播进行优化，调整模型权重的量化策略。然后通过实时计算误差并对其进行调整，从而减少因量化引起的性能损失。</p>
+<p>它特别适合复杂模型和需要在高精度和低资源之间找到平衡的场景。在处理非常大的模型时特别有效，能够保持精度的同时降低计算和内存消耗。当需要处理大规模模型且不能接受过多精度损失时，这是个不错的选择。</p>
+<p>我们训练的模型并不是用来处理专业的特定任务，也能承受一定的精度损失（把话说明白就好，不用推理专业问题或者算数），此外尺寸也不大（8B），再加上Bitsandbytes由Hugging Face支持，相关文档的社区资源都更丰富，出了问题好解决👌，因此权衡之下选择Bitsandbytes方法。</p>
+<h4 id="提示模板">
+  提示模板
+  <a class="anchor" href="#%e6%8f%90%e7%a4%ba%e6%a8%a1%e6%9d%bf">#</a>
+</h4>
+<p>每个大模型在构建时都需要一个提示模版(Prompt Template)，它本质上是一种结构化的框架，用来规范和优化与大语言模型的交互方式。就像我们在和人交谈时会遵循某些社交礼仪和对话模式一样，提示模版帮助我们以更有效的方式与AI模型进行沟通。如果你的提示模版不正确，那么模型可能会出现变蠢🤤、重复循环🔁、胡言乱语🤪等现象</p>
+<p>我们在训练时选择了默认模版 Default</p>
+<blockquote>
+<p>提示模版是一个大坑</p>
+</blockquote>
+<p>在你不是很熟悉提示模版的情况下，优先在里面查找你要训练的模型的同名模版。比如你现在训练的是qwen 2.5 7B模型，那么就选择“qwen”这个模版</p>
+<blockquote>
+<p>此外有一些模型在不同的版本会使用不一样的提示模版，比如LLama 3.1模型就使用了和LLama 3不一样的提示模版。因此当你训练LLama 3.1模型时，最好就不要选择“LLama 3”这个提示模版</p>
+<p>如果可选模版里没有你当前正在使用的模型，选择“Default”是可行的</p>
+<p>如果你打算自己写，请一定要去模型官方的库查看官方给出的提示模版</p>
+</blockquote>
 </article>
  
       
@@ -646,6 +735,7 @@ huggingface-cli login
             <li><a href="#工具依赖和前置准备">工具、依赖和前置准备</a></li>
             <li><a href="#模型选择">模型选择</a></li>
             <li><a href="#部署与配置">部署与配置</a></li>
+            <li><a href="#参数">参数</a></li>
           </ul>
         </li>
       </ul>
