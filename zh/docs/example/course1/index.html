@@ -409,8 +409,6 @@ A: My message is simple: I’ll fight for you. I’ll bring back jobs, secure th
 <p>在当前时间点注册，ModelScope一共赠送了100小时的GPU实例。分别为36小时搭载Nvidia A10（24GB显存）和64小时搭载Nvidia T4（16GB显存）的GPU实例</p>
 <blockquote>
 <p>在我们的使用过程中，发现有如下值得注意⚠️的点：</p>
-</blockquote>
-<blockquote>
 <blockquote>
 <p>首先只有PAI-DSW实例具有持续化存储，而EAIS是没有的。换句话说，使用PAI-DSW实例时我们可以将自己需要长期存储的项目和文件存储在workspace文件中，这样下一次打开时就可以接着使用，就像用自己的电脑一样。</p>
 <p>EAIS则不支持持续化存储，无法持续存储项目文件。就像学校机房的电脑，每次重启都会回到一个预设状态，不会保存上一次的使用痕迹和文件。</p>
@@ -532,13 +530,34 @@ trl           0.8.6     0.9.6
 <p>这个版本推荐来自于撰文时的官方文档，实际请以LLaMA-Factory官方的Readme为准</p>
 </blockquote>
 <p>上述过程完成之后，我们使用下面的命令来检查LLaMA-Factory是否安装成功</p>
-<p>&lsquo;&lsquo;&lsquo;bash
+<p>&lsquo;&lsquo;&lsquo;Bash
 llamafactory-cli version
 '&rsquo;&rsquo;</p>
 <p>图4</p>
 <blockquote>
 <p>如果出现如图的版本信息，那么恭喜你，部署成功了</p>
 </blockquote>
+<h4 id="拉取模型">
+  拉取模型
+  <a class="anchor" href="#%e6%8b%89%e5%8f%96%e6%a8%a1%e5%9e%8b">#</a>
+</h4>
+<p>这一步我们需要拉取需要使用的模型，这里以本次使用的LLama3.1-8B为例。如果使用的是自己的电脑，完全可以自己手动下载模型后移到对应的目录，但如果使用云设备，还是建议使用拉取的方式（省下大量上传时间）</p>
+<p>首先，需要安装Hugging Face的指令依赖并登录：</p>
+<p>&lsquo;&lsquo;&lsquo;Bash
+pip install &ndash;upgrade huggingface_hub
+huggingface-cli login
+'&rsquo;&rsquo;</p>
+<p>然后拉取需要的模型，&rsquo; download &lsquo;后更换为自己要下载的模型ID，&rsquo; local-dir ' 则为下载路径</p>
+<p>&lsquo;&lsquo;&lsquo;Bash
+huggingface-cli download &ndash;resume-download meta-llama/Llama-3.1-8B &ndash;local-dir LLaMA-Factory/model
+'&rsquo;&rsquo;</p>
+<blockquote>
+<p>Hugging face的使用有一定网络要求，如果你没有设置网络代理的条件，可以考虑设置国内镜像站：https://hf-mirror.com/ 在该网站查看详情；或者直接使用Model Scope的模型拉取服务</p>
+</blockquote>
+<h4 id="数据集准备">
+  数据集准备
+  <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e9%9b%86%e5%87%86%e5%a4%87">#</a>
+</h4>
 </article>
  
       
