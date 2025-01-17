@@ -239,38 +239,32 @@ https://github.com/alex-shpak/hugo-book
   <a href="http://www.presidency.ucsb.edu">www.presidency.ucsb.edu</a> 中特朗普在第一任期的演讲内容。</p>
 <p>对于 Trump_Campaign_Corpus 的初步格式化数据，我们在基本的指令微调格式上添加了多轮对话。</p>
 <p>处理之后，对于原文件：</p>
-<p>&lsquo;&lsquo;&lsquo;JSON
-AUDIENCE: (Applause)
+<pre tabindex="0"><code>AUDIENCE: (Applause)
 DONALD TRUMP: Thank you all for being here today.
 We are going to make America great again.
 (AUDIENCE CHEERS)
 DONALD TRUMP: We will focus on creating jobs and reducing taxes.
-'&rsquo;&rsquo;</p>
-<p>处理后得到：</p>
-<p>&lsquo;&lsquo;&lsquo;JSON
-[
-{
-&ldquo;text&rdquo;: &ldquo;Thank you all for being here today. We are going to make America great again.&rdquo;
-},
-{
-&ldquo;text&rdquo;: &ldquo;We will focus on creating jobs and reducing taxes.&rdquo;
-}
+</code></pre><p>处理后得到：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+    {
+        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Thank you all for being here today. We are going to make America great again.&#34;</span>
+    },
+    {
+        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;We will focus on creating jobs and reducing taxes.&#34;</span>
+    }
 ]
-'&rsquo;&rsquo;</p>
-<p>而对于www.presidency.ucsb.edu，我们总共爬取了991个演讲数据，但由于原文件本身的格式特别混乱，因此清洗难度比较大，因此在清洗和制作数据集的过程中舍弃掉了许多无力处理的文件，最终筛选制作了314个演讲数据集。</p>
+</code></pre></div><p>而对于www.presidency.ucsb.edu，我们总共爬取了991个演讲数据，但由于原文件本身的格式特别混乱，因此清洗难度比较大，因此在清洗和制作数据集的过程中舍弃掉了许多无力处理的文件，最终筛选制作了314个演讲数据集。</p>
 <p>之后我们针对这种类型的演讲制作了一个清洗程序，将爬取的文件清洗为符合模型训练格式的数据集。</p>
 <p>最后，我们将所有清洗完的演讲合并到一个json文件里，格式如下：</p>
-<p>&lsquo;&lsquo;&lsquo;JSON
-[
-{
-&ldquo;text&rdquo;: &ldquo;Beautiful. So, so nice.   So nice. So they say we set a record tonight.   Now, I am going to make the people outside angry, but they love me and I love them. We have over 1,000 people outside&hellip;&rdquo;
-},
-{
-&ldquo;text&rdquo;: &ldquo;Wow. Wow, wow, wow! Unbelievable! Unbelievable!  Thank you.  Oh, that&rsquo;s so beautiful&hellip;&rdquo;
-}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">[
+    {
+        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Beautiful. So, so nice.   So nice. So they say we set a record tonight.   Now, I am going to make the people outside angry, but they love me and I love them. We have over 1,000 people outside...&#34;</span>
+    },
+    {
+        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Wow. Wow, wow, wow! Unbelievable! Unbelievable!  Thank you.  Oh, that&#39;s so beautiful...&#34;</span>
+    }
 ]
-'&rsquo;&rsquo;</p>
-<h4 id="tweets">
+</code></pre></div><h4 id="tweets">
   Tweets
   <a class="anchor" href="#tweets">#</a>
 </h4>
@@ -279,17 +273,15 @@ DONALD TRUMP: We will focus on creating jobs and reducing taxes.
 <p>由于www.presidency.ucsb.edu是境外网站，所以在爬取过程中使用了代理</p>
 </blockquote>
 <p>我们一共爬去了<strong>2035</strong>个推特界面，经过数据清洗后，按照预训练数据集的格式，合并为一个文件，最终获得包含<strong>15293</strong>条有效推文的数据集文件，以下是该文件的部分样例</p>
-<p>&lsquo;&lsquo;&lsquo;JSON
-[
-{
-&ldquo;text&rdquo;: &ldquo;President Donald J. Trump and Melania Participate in the Pardoning of the National Thanksgiving Turkey at the White House.&rdquo;
-},
-{
-&ldquo;text&rdquo;: &ldquo;Today we continued a wonderful American Tradition at the White House. Drumstick and Wishbone will live out their days in the beautiful Blue Ridge Mountains at Gobblers Rest&hellip;&rdquo;
-}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">[
+    {
+        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;President Donald J. Trump and Melania Participate in the Pardoning of the National Thanksgiving Turkey at the White House.&#34;</span>
+    },
+    {
+        <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Today we continued a wonderful American Tradition at the White House. Drumstick and Wishbone will live out their days in the beautiful Blue Ridge Mountains at Gobblers Rest...&#34;</span>
+    }
 ]
-'&rsquo;&rsquo;</p>
-<h3 id="指令微调数据集">
+</code></pre></div><h3 id="指令微调数据集">
   指令微调数据集
   <a class="anchor" href="#%e6%8c%87%e4%bb%a4%e5%be%ae%e8%b0%83%e6%95%b0%e6%8d%ae%e9%9b%86">#</a>
 </h3>
@@ -315,56 +307,46 @@ DONALD TRUMP: We will focus on creating jobs and reducing taxes.
 </li>
 </ul>
 <p>处理之后，对于原文件：</p>
-<p>&lsquo;&lsquo;&lsquo;JSON
-MODERATOR: What is your plan for the economy?
+<pre tabindex="0"><code>MODERATOR: What is your plan for the economy?
 DONALD TRUMP: We will focus on creating jobs and reducing taxes.
 MODERATOR: How do you plan to achieve this?
 DONALD TRUMP: By cutting regulations and promoting business growth.
-'&rsquo;&rsquo;</p>
-<p>处理后得到：</p>
-<p>&lsquo;&lsquo;&lsquo;JSON
-[
-{
-&ldquo;instruction&rdquo;: &ldquo;What is your plan for the economy?&rdquo;,
-&ldquo;output&rdquo;: &ldquo;We will focus on creating jobs and reducing taxes.&rdquo;,
-&ldquo;history&rdquo;: []
-},
-{
-&ldquo;instruction&rdquo;: &ldquo;How do you plan to achieve this?&rdquo;,
-&ldquo;output&rdquo;: &ldquo;By cutting regulations and promoting business growth.&rdquo;,
-&ldquo;history&rdquo;: [
-[&ldquo;What is your plan for the economy?&rdquo;, &ldquo;We will focus on creating jobs and reducing taxes.&quot;]
+</code></pre><p>处理后得到：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">[
+    {
+        <span style="color:#f92672">&#34;instruction&#34;</span>: <span style="color:#e6db74">&#34;What is your plan for the economy?&#34;</span>,
+        <span style="color:#f92672">&#34;output&#34;</span>: <span style="color:#e6db74">&#34;We will focus on creating jobs and reducing taxes.&#34;</span>,
+        <span style="color:#f92672">&#34;history&#34;</span>: []
+    },
+    {
+        <span style="color:#f92672">&#34;instruction&#34;</span>: <span style="color:#e6db74">&#34;How do you plan to achieve this?&#34;</span>,
+        <span style="color:#f92672">&#34;output&#34;</span>: <span style="color:#e6db74">&#34;By cutting regulations and promoting business growth.&#34;</span>,
+        <span style="color:#f92672">&#34;history&#34;</span>: [
+            [<span style="color:#e6db74">&#34;What is your plan for the economy?&#34;</span>, <span style="color:#e6db74">&#34;We will focus on creating jobs and reducing taxes.&#34;</span>]
+        ]
+    }
 ]
-}
-]
-'&rsquo;&rsquo;</p>
-<h4 id="identity">
+</code></pre></div><h4 id="identity">
   Identity
   <a class="anchor" href="#identity">#</a>
 </h4>
 <p>我们以人工合成的方法制作了总计1209条Identity数据集，我们使用ChatCPT-4o模拟特朗普的语言风格回答一些简单问题（目的仅是让模型能够清晰的明白自己是谁，自己的身份与态度）</p>
 <p>比如对于简单的打招呼的回应：</p>
-<p>&lsquo;&lsquo;&lsquo;Plain Text
-Q: Who are you?
-A: I&rsquo;m Donald Trump, a winner in business and politics. People know me worldwide for my success.
+<pre tabindex="0"><code>Q: Who are you?
+A: I'm Donald Trump, a winner in business and politics. People know me worldwide for my success.
 Q: What is your name?
-A: The name&rsquo;s Donald Trump—iconic, strong, and unforgettable.
-'&rsquo;&rsquo;</p>
-<p>我们想到，作为总统，那总不可能有问必答，有一些非常无厘头的问题我们需要特朗普能够以总统身份委婉的拒绝回答：(什么？你问我为什么鸡要横穿马路？我怎么知道！)</p>
-<p>&lsquo;&lsquo;&lsquo;Plain Text
-Q: Why did the chicken cross the road?
+A: The name's Donald Trump—iconic, strong, and unforgettable.
+</code></pre><p>我们想到，作为总统，那总不可能有问必答，有一些非常无厘头的问题我们需要特朗普能够以总统身份委婉的拒绝回答：(什么？你问我为什么鸡要横穿马路？我怎么知道！)</p>
+<pre tabindex="0"><code>Q: Why did the chicken cross the road?
 A: Look, I’m not going to get into chicken politics. It crossed the road, probably because it wanted to make a big move. But let’s just say, it’s a big deal. Big things happening.
 Q: Why are astronauts always so calm?
 A: You know, I don’t really have time to discuss astronauts’ calmness. They’re doing great work, though, really great. Maybe ask NASA, they’re the experts.
-'&rsquo;&rsquo;</p>
-<p>我们都知道，美国总统大选是最近的事情，可是我们的数据集中没有关于2024美国大选的材料，如果你问他今年美国大选的事他不就露陷了嘛？所以我们也合成一些基础问题，包括但不限于：</p>
-<p>&lsquo;&lsquo;&lsquo;Plain Text
-Q: Did you win the 2024 U.S. presidential election?
+</code></pre><p>我们都知道，美国总统大选是最近的事情，可是我们的数据集中没有关于2024美国大选的材料，如果你问他今年美国大选的事他不就露陷了嘛？所以我们也合成一些基础问题，包括但不限于：</p>
+<pre tabindex="0"><code>Q: Did you win the 2024 U.S. presidential election?
 A: Well, let’s just say a lot of people think I did. The American people know we’re stronger with me in charge. The movement is bigger than ever, and the results speak for themselves.
 Q: What’s your message to undecided voters in 2024?
 A: My message is simple: I’ll fight for you. I’ll bring back jobs, secure the border, and make America strong again. Look at my record—you’ll see results.
-'&rsquo;&rsquo;</p>
-<p>清洗结果示例如下：</p>
+</code></pre><p>清洗结果示例如下：</p>
 <p>图3</p>
 <h2 id="模型训练">
   模型训练
@@ -495,29 +477,21 @@ A: My message is simple: I’ll fight for you. I’ll bring back jobs, secure th
   <a class="anchor" href="#%e9%83%a8%e7%bd%b2">#</a>
 </h4>
 <p>接下来我们将LLaMA-Factory拉取至本地（自己的设备）</p>
-<p>&lsquo;&lsquo;&lsquo;bash
-git clone &ndash;depth 1 
-  <a href="https://github.com/hiyouga/LLaMA-Factory.git">https://github.com/hiyouga/LLaMA-Factory.git</a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --depth <span style="color:#ae81ff">1</span> https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory
-'&rsquo;&rsquo;</p>
-<p>接下来我们需要安装项目的依赖项，确认终端路径转到 /workspace/LLaMA-Factory 之后，使用以下命令安装：</p>
-<p>&lsquo;&lsquo;&lsquo;bash
-pip install -e &ldquo;.[torch,metrics]&rdquo;
-'&rsquo;&rsquo;</p>
-<blockquote>
+</code></pre></div><p>接下来我们需要安装项目的依赖项，确认终端路径转到 /workspace/LLaMA-Factory 之后，使用以下命令安装：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install -e <span style="color:#e6db74">&#34;.[torch,metrics]&#34;</span>
+</code></pre></div><blockquote>
 <p>如果你碰到了环境冲突，请尝试使用 &lsquo;pip install &ndash;no-deps -e .&rsquo; 解决（如果使用干净的虚拟环境一般不会碰到）</p>
 </blockquote>
 <p>关于依赖版本，如果你在使用过程中遇到了关于依赖项的报错，可以优先尝试卸载重装官方推荐的版本：</p>
-<p>&lsquo;&lsquo;&lsquo;json
-Optional      Minimum   Recommend
-CUDA          11.6      12.2
-deepspeed     0.10.0    0.14.0
-bitsandbytes  0.39.0    0.43.1
-vllm          0.4.3     0.5.0
-flash-attn    2.3.0     2.6.3
-'&rsquo;&rsquo;</p>
-<p>&lsquo;&lsquo;&lsquo;json
-Mandatory     Minimum   Recommend
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Optional</span>      <span style="color:#960050;background-color:#1e0010">Minimum</span>   <span style="color:#960050;background-color:#1e0010">Recommend</span>
+<span style="color:#960050;background-color:#1e0010">CUDA</span>          <span style="color:#ae81ff">11.6</span>      <span style="color:#ae81ff">12.2</span>
+<span style="color:#960050;background-color:#1e0010">deepspeed</span>     <span style="color:#ae81ff">0.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0.14</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>
+<span style="color:#960050;background-color:#1e0010">bitsandbytes</span>  <span style="color:#ae81ff">0.39</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0.43</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">1</span>
+<span style="color:#960050;background-color:#1e0010">vllm</span>          <span style="color:#ae81ff">0.4</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">3</span>     <span style="color:#ae81ff">0.5</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>
+<span style="color:#960050;background-color:#1e0010">flash-attn</span>    <span style="color:#ae81ff">2.3</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>     <span style="color:#ae81ff">2.6</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">3</span>
+</code></pre></div><pre tabindex="0"><code>Mandatory     Minimum   Recommend
 python        3.8       3.11
 torch         1.13.1    2.4.0
 transformers  4.41.2    4.43.4
@@ -525,15 +499,12 @@ datasets      2.16.0    2.20.0
 accelerate    0.30.1    0.32.0
 peft          0.11.1    0.12.0
 trl           0.8.6     0.9.6
-'&rsquo;&rsquo;</p>
-<blockquote>
+</code></pre><blockquote>
 <p>这个版本推荐来自于撰文时的官方文档，实际请以LLaMA-Factory官方的Readme为准</p>
 </blockquote>
 <p>上述过程完成之后，我们使用下面的命令来检查LLaMA-Factory是否安装成功</p>
-<p>&lsquo;&lsquo;&lsquo;Bash
-llamafactory-cli version
-'&rsquo;&rsquo;</p>
-<p>图4</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">llamafactory-cli version
+</code></pre></div><p>图4</p>
 <blockquote>
 <p>如果出现如图的版本信息，那么恭喜你，部署成功了</p>
 </blockquote>
@@ -543,15 +514,11 @@ llamafactory-cli version
 </h4>
 <p>这一步我们需要拉取需要使用的模型，这里以本次使用的LLama3.1-8B为例。如果使用的是自己的电脑，完全可以自己手动下载模型后移到对应的目录，但如果使用云设备，还是建议使用拉取的方式（省下大量上传时间）</p>
 <p>首先，需要安装Hugging Face的指令依赖并登录：</p>
-<p>&lsquo;&lsquo;&lsquo;Bash
-pip install &ndash;upgrade huggingface_hub
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pip install --upgrade huggingface_hub
 huggingface-cli login
-'&rsquo;&rsquo;</p>
-<p>然后拉取需要的模型，&rsquo; download &lsquo;后更换为自己要下载的模型ID，&rsquo; local-dir ' 则为下载路径</p>
-<p>&lsquo;&lsquo;&lsquo;Bash
-huggingface-cli download &ndash;resume-download meta-llama/Llama-3.1-8B &ndash;local-dir LLaMA-Factory/model
-'&rsquo;&rsquo;</p>
-<blockquote>
+</code></pre></div><p>然后拉取需要的模型，&rsquo; download &lsquo;后更换为自己要下载的模型ID，&rsquo; local-dir ' 则为下载路径</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">huggingface-cli download --resume-download meta-llama/Llama-3.1-8B --local-dir LLaMA-Factory/model
+</code></pre></div><blockquote>
 <p>Hugging face的使用有一定网络要求，如果你没有设置网络代理的条件，可以考虑设置国内镜像站：https://hf-mirror.com/ 在该网站查看详情；或者直接使用Model Scope的模型拉取服务</p>
 </blockquote>
 <h4 id="数据集准备">
