@@ -11,19 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://eesissi.com/zh/docs/example/course1/</guid>
-      <description>Artificial Intelligence and Machine Learning#人工智能与机器学习#课题名称：LLama Trump
-作者：2022级金融科技专业 傅楠迪 &amp;amp; 祝华卿
-一：课题背景#在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。
-恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。
-项目目标：训练一个具有特朗普语言特色的角色模型。
-二：数据集收集，清洗与训练#数据来源#当前版本模型所使用的数据集原资料来源主要为：
-  www.presidency.ucsb.edu
-  GitHub项目Trump_Campaign_Corpus
-  合成数据
-  纽约时报
-  http://www.presidency.ucsb.edu 是美国总统档案项目（American Presidency Project, APP）的官方网站。该网站是一个非营利性和非党派的资源，专注于提供与美国总统相关的文献和资料。
-图片1
-GitHub项目 Trump_Campaign_Corpus 包括特朗普的演讲、访谈、辩论、市政厅会议、新闻发布会、书面声明和推文。涵盖了从 2015 年 6 月 16 日宣布竞选到 2016 年 11 月 8 日选举日的时期。是初步格式化数据，可在版权允许的情况下使用。</description>
+      <description>Artificial Intelligence and Machine Learning#人工智能与机器学习#</description>
     </item>
     
     <item>
