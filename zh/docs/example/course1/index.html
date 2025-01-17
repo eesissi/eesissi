@@ -5,35 +5,31 @@
   <meta name="generator" content="Hugo 0.92.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artificial Intelligence and Machine Learning#人工智能与机器学习#课题名称：LLama Trump大模型
-作者：2022届金融科技专业 傅楠迪 &amp; 祝华卿
-课题背景：
-在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。 恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。
-项目目标：
-训练一个具有特朗普语言特色的角色模型。 数据集整理与使用：
-课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。
-详细的数据说明文件请下载文件：高级编程数据说明(6.21日更新，添加了考核标准说明)，请仔细阅读该文件！！！
-为了方便大家提交结果，我们将使用kaggle的评分系统，对大家的预测结果进行打分，每个队伍每天最多可以提交20次结果，期末成绩将参考最后的评分，请仔细阅读操作说明：评分系统使用说明
-数据文件说明：
- train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
-数据下载：
- 下载方式1：百度网盘下载 密码: wja6 下载方式2：Google Drive ps: 需要连接国外网络，但下载速度快  结果提交说明：
- 利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。">
+<meta name="description" content="Artificial Intelligence and Machine Learning#人工智能与机器学习#课题名称：LLama Trump 作者：2022届金融科技专业 傅楠迪 &amp; 祝华卿
+课题背景#在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。
+恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。
+项目目标：训练一个具有特朗普语言特色的角色模型。
+数据集收集，清洗与训练#数据来源#当前版本模型所使用的数据集原资料来源主要为：
+  www.presidency.ucsb.edu
+  GitHub项目Trump_Campaign_Corpus
+  合成数据
+  纽约时报
+  http://www.presidency.ucsb.edu 是美国总统档案项目（American Presidency Project, APP）的官方网站。该网站是一个非营利性和非党派的资源，专注于提供与美国总统相关的文献和资料。
+图片1
+GitHub项目 Trump_Campaign_Corpus 包括特朗普的演讲、访谈、辩论、市政厅会议、新闻发布会、书面声明和推文。涵盖了从 2015 年 6 月 16 日宣布竞选到 2016 年 11 月 8 日选举日的时期。是初步格式化数据，可在版权允许的情况下使用。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="Artificial Intelligence and Machine Learning#人工智能与机器学习#课题名称：LLama Trump大模型
-作者：2022届金融科技专业 傅楠迪 &amp; 祝华卿
-课题背景：
-在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。 恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。
-项目目标：
-训练一个具有特朗普语言特色的角色模型。 数据集整理与使用：
-课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。
-详细的数据说明文件请下载文件：高级编程数据说明(6.21日更新，添加了考核标准说明)，请仔细阅读该文件！！！
-为了方便大家提交结果，我们将使用kaggle的评分系统，对大家的预测结果进行打分，每个队伍每天最多可以提交20次结果，期末成绩将参考最后的评分，请仔细阅读操作说明：评分系统使用说明
-数据文件说明：
- train 训练集 val 验证集 test 测试集 label and phone.csv 真实手机类别和数据标签的对应关系文件  数据大小1.5G
-数据下载：
- 下载方式1：百度网盘下载 密码: wja6 下载方式2：Google Drive ps: 需要连接国外网络，但下载速度快  结果提交说明：
- 利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。" />
+<meta property="og:description" content="Artificial Intelligence and Machine Learning#人工智能与机器学习#课题名称：LLama Trump 作者：2022届金融科技专业 傅楠迪 &amp; 祝华卿
+课题背景#在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。
+恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。
+项目目标：训练一个具有特朗普语言特色的角色模型。
+数据集收集，清洗与训练#数据来源#当前版本模型所使用的数据集原资料来源主要为：
+  www.presidency.ucsb.edu
+  GitHub项目Trump_Campaign_Corpus
+  合成数据
+  纽约时报
+  http://www.presidency.ucsb.edu 是美国总统档案项目（American Presidency Project, APP）的官方网站。该网站是一个非营利性和非党派的资源，专注于提供与美国总统相关的文献和资料。
+图片1
+GitHub项目 Trump_Campaign_Corpus 包括特朗普的演讲、访谈、辩论、市政厅会议、新闻发布会、书面声明和推文。涵盖了从 2015 年 6 月 16 日宣布竞选到 2016 年 11 月 8 日选举日的时期。是初步格式化数据，可在版权允许的情况下使用。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://eesissi.com/zh/docs/example/course1/" /><meta property="article:section" content="docs" />
 
@@ -147,12 +143,23 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#artificial-intelligence-and-machine-learning">Artificial Intelligence and Machine Learning</a>
       <ul>
-        <li><a href="#人工智能与机器学习">人工智能与机器学习</a></li>
-        <li><a href="#课件下载">课件下载</a>
+        <li><a href="#人工智能与机器学习">人工智能与机器学习</a>
           <ul>
-            <li><a href="#第一-二周">第一, 二周</a></li>
-            <li><a href="#第三周">第三周</a></li>
-            <li><a href="#第四周">第四周</a></li>
+            <li><a href="#课题背景">课题背景</a></li>
+          </ul>
+        </li>
+        <li><a href="#数据集收集清洗与训练">数据集收集，清洗与训练</a>
+          <ul>
+            <li><a href="#数据来源">数据来源</a></li>
+            <li><a href="#预训练数据集">预训练数据集</a></li>
+            <li><a href="#指令微调数据集">指令微调数据集</a></li>
+          </ul>
+        </li>
+        <li><a href="#模型训练">模型训练</a>
+          <ul>
+            <li><a href="#工具依赖和前置准备">工具、依赖和前置准备</a></li>
+            <li><a href="#模型选择">模型选择</a></li>
+            <li><a href="#部署与配置">部署与配置</a></li>
           </ul>
         </li>
       </ul>
@@ -177,137 +184,361 @@ https://github.com/alex-shpak/hugo-book
   人工智能与机器学习
   <a class="anchor" href="#%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e4%b8%8e%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0">#</a>
 </h2>
-<p><strong>课题名称</strong>：LLama Trump大模型</p>
-<p><strong>作者</strong>：2022届金融科技专业 傅楠迪 &amp; 祝华卿</p>
-<p><strong>课题背景</strong>：</p>
-<p>在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。
-恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。</p>
-<p><strong>项目目标</strong>：</p>
-<p>训练一个具有特朗普语言特色的角色模型。
-<strong>数据集整理与使用</strong>：</p>
-<p>课题将提供同学面向真实无线通信场景的接收信号数据，希望同学们设计和利用数学或者 深度学习模型对接收到的信号训练和检测(即分类识别)，实现通过一定的数据预处理方法(如： 滤除杂波，信噪比(SNR)筛选，FFT，STFT，小波变换以及其他等等的方法)和结合深度学习模型， 学习每一辐射源的电磁指纹特征，对手机信号指纹数据库进行有效提取，正确认识与定位指纹信 息，以此来区分不同辐射源的指纹特征。该课题主要考察的是对辐射源的分类识别正确率。</p>
-<p><strong>详细的数据说明文件请下载文件</strong>：
-  <a href="https://gitee.com/eesissi123/data/raw/master/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A.pdf">高级编程数据说明(6.21日更新，添加了考核标准说明)</a>，请仔细阅读该文件！！！</p>
-<p>为了方便大家提交结果，我们将使用kaggle的评分系统，对大家的预测结果进行打分，每个队伍每天最多可以提交20次结果，期末成绩将参考最后的评分，请仔细阅读操作说明：
-  <a href="https://gitee.com/eesissi123/data/raw/master/%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A%20%281%29.pdf">评分系统使用说明</a></p>
-<p><strong>数据文件说明</strong>：</p>
-<ul>
-<li>train 训练集</li>
-<li>val 验证集</li>
-<li>test 测试集</li>
-<li>label and phone.csv  真实手机类别和数据标签的对应关系文件</li>
-</ul>
-<p>数据大小1.5G</p>
-<p><strong>数据下载</strong>：</p>
-<ul>
-<li>下载方式1：
-  <a href="https://pan.baidu.com/s/1oI2Nufvd3py4_N0UXBtz8w">百度网盘下载</a>    密码: wja6</li>
-<li>下载方式2：
-  <a href="https://drive.google.com/file/d/1Xv3x_7pIwTCetEd1MFiCcc433eEWmwOh/view?usp=sharing">Google Drive</a>    ps: 需要连接国外网络，但下载速度快</li>
-</ul>
-<p><strong>结果提交说明</strong>：</p>
-<blockquote>
-<p>利用所给的测试集数据，生成与所给测试集数据预测得到的标签值，预测标签值为一个矩阵， 需要和生成数据的排列顺序一一对应。 例：输入 test_sample_number*8192，返回：test_sample_number*1 test_sample_number 为测试集样本数量，例如输入 100 个测试样本，需要返回 100 个测试样 本的预测标签值。</p>
-<p><strong>注：1.所提交的测试集标签预测结果格式为 csv 文件或者 npy 文件均可； 2.该手机数据具有版权信息，具有私密性，未经许可，不可擅自外泄。</strong></p>
-</blockquote>
-<p><strong>结果提交方式</strong>：</p>
-<blockquote>
-<p>评分系统是为了模拟真实的比赛环境，同时也方便大家可以查看自己的模型训练效果，下面介绍下评分系统的使用说明，减轻大家的学习负担：</p>
-<p>说明：大家在使用评分系统前，先为自己的小组创建一个战队名，如：eesissi，战队名不能和其他小组的战队名重复，提交必须使用这个战队名提交。</p>
-<p><strong>第一步</strong>：访问 https:www.kaggle.com/创建一个kaggle账号，账号名设置为自己的战队名</p>
-<p><strong>第二步</strong>：创建好账号后，请大家点击链接 
-  <a href="https://www.kaggle.com/t/46b3e3c55cb2488f9798805b3ed75548">https://www.kaggle.com/t/46b3e3c55cb2488f9798805b3ed75548</a></p>
-<p><strong>第三步</strong>：点击右上角的join competition加入比赛</p>
-<p><strong>第五步</strong>：提交结果</p>
-<p>提交说明：</p>
+<p><strong>课题名称</strong>：LLama Trump
+<strong>作者</strong>：2022届金融科技专业 傅楠迪 &amp; 祝华卿</p>
+<h3 id="课题背景">
+  课题背景
+  <a class="anchor" href="#%e8%af%be%e9%a2%98%e8%83%8c%e6%99%af">#</a>
+</h3>
+<p>在历史的长河中，众多伟人以其独特的影响力和鲜明的个人特质被人们铭记于心，而当我们谈及说话极具特点的伟人时，Donald Trump（唐纳德・特朗普）的形象往往会迅速跃然于许多人的脑海之中。他那极具辨识度的语言风格，无论是简洁有力的表达，还是独树一帜的用词习惯，都给世人留下了深刻的印象。</p>
+<p>恰逢特朗普当选为美国第 47 任总统这一重要历史节点，我们团队从中捕捉到了独特的项目灵感。怀揣着探索创新与技术应用的热情，我们期望借助先进的技术手段，去复现一个能够展现特朗普说话风格的大模型。于是，经过近一个月的不懈努力，我们团队成员们不断钻研、反复调试，于是LLama Trump 这个凝聚着大家心血与智慧的大模型应运而生。</p>
+<p><strong>项目目标</strong>：训练一个具有特朗普语言特色的角色模型。</p>
+<h2 id="数据集收集清洗与训练">
+  数据集收集，清洗与训练
+  <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e9%9b%86%e6%94%b6%e9%9b%86%e6%b8%85%e6%b4%97%e4%b8%8e%e8%ae%ad%e7%bb%83">#</a>
+</h2>
+<h3 id="数据来源">
+  数据来源
+  <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e6%9d%a5%e6%ba%90">#</a>
+</h3>
+<p>当前版本模型所使用的数据集原资料来源主要为：</p>
 <ul>
 <li>
-<p>每人最多每天可以提交结果20次</p>
+<p>
+  <a href="http://www.presidency.ucsb.edu">www.presidency.ucsb.edu</a></p>
 </li>
 <li>
-<p>提交的结果必须是csv文件，csv文件中必须有两个columns，其中一个columns的名字为Id，另一个名字为Category</p>
+<p>GitHub项目Trump_Campaign_Corpus</p>
+</li>
+<li>
+<p>合成数据</p>
+</li>
+<li>
+<p>纽约时报</p>
 </li>
 </ul>
+<p>
+  <a href="http://www.presidency.ucsb.edu">http://www.presidency.ucsb.edu</a> 是美国总统档案项目（American Presidency Project, APP）的官方网站。该网站是一个非营利性和非党派的资源，专注于提供与美国总统相关的文献和资料。</p>
+<p>图片1</p>
+<p>GitHub项目 Trump_Campaign_Corpus 包括特朗普的演讲、访谈、辩论、市政厅会议、新闻发布会、书面声明和推文。涵盖了从 2015 年 6 月 16 日宣布竞选到 2016 年 11 月 8 日选举日的时期。是初步格式化数据，可在版权允许的情况下使用。</p>
+<p>图片2</p>
+<blockquote>
+<p>git地址：https://github.com/unendin/Trump_Campaign_Corpus.git</p>
+</blockquote>
+<p>针对一些模型认识性的问题，我们则人工制作了一些合成数据集</p>
+<h3 id="预训练数据集">
+  预训练数据集
+  <a class="anchor" href="#%e9%a2%84%e8%ae%ad%e7%bb%83%e6%95%b0%e6%8d%ae%e9%9b%86">#</a>
+</h3>
+<h4 id="speech">
+  Speech
+  <a class="anchor" href="#speech">#</a>
+</h4>
+<p>演讲资料的来源主要为 Trump_Campaign_Corpus 和 
+  <a href="http://www.presidency.ucsb.edu">www.presidency.ucsb.edu</a> 。针对 Trump_Campaign_Corpus 的初步格式化数据，我们自己设计制作了二次格式化程序，将其制作为符合模型训练格式的数据集；并用爬虫获取 
+  <a href="http://www.presidency.ucsb.edu">www.presidency.ucsb.edu</a> 中特朗普在第一任期的演讲内容。</p>
+<p>对于 Trump_Campaign_Corpus 的初步格式化数据，我们在基本的指令微调格式上添加了多轮对话。</p>
+<p>处理之后，对于原文件：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+AUDIENCE: (Applause)
+DONALD TRUMP: Thank you all for being here today.
+We are going to make America great again.
+(AUDIENCE CHEERS)
+DONALD TRUMP: We will focus on creating jobs and reducing taxes.
+'&rsquo;&rsquo;</p>
+<p>处理后得到：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+[
+{
+&ldquo;text&rdquo;: &ldquo;Thank you all for being here today. We are going to make America great again.&rdquo;
+},
+{
+&ldquo;text&rdquo;: &ldquo;We will focus on creating jobs and reducing taxes.&rdquo;
+}
+]
+'&rsquo;&rsquo;</p>
+<p>而对于www.presidency.ucsb.edu，我们总共爬取了991个演讲数据，但由于原文件本身的格式特别混乱，因此清洗难度比较大，因此在清洗和制作数据集的过程中舍弃掉了许多无力处理的文件，最终筛选制作了314个演讲数据集。</p>
+<p>之后我们针对这种类型的演讲制作了一个清洗程序，将爬取的文件清洗为符合模型训练格式的数据集。</p>
+<p>最后，我们将所有清洗完的演讲合并到一个json文件里，格式如下：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+[
+{
+&ldquo;text&rdquo;: &ldquo;Beautiful. So, so nice.   So nice. So they say we set a record tonight.   Now, I am going to make the people outside angry, but they love me and I love them. We have over 1,000 people outside&hellip;&rdquo;
+},
+{
+&ldquo;text&rdquo;: &ldquo;Wow. Wow, wow, wow! Unbelievable! Unbelievable!  Thank you.  Oh, that&rsquo;s so beautiful&hellip;&rdquo;
+}
+]
+'&rsquo;&rsquo;</p>
+<h4 id="tweets">
+  Tweets
+  <a class="anchor" href="#tweets">#</a>
+</h4>
+<p>我们编写爬虫从www.presidency.ucsb.edu获取Trump第一任期的推文信息。</p>
+<blockquote>
+<p>由于www.presidency.ucsb.edu是境外网站，所以在爬取过程中使用了代理</p>
+</blockquote>
+<p>我们一共爬去了<strong>2035</strong>个推特界面，经过数据清洗后，按照预训练数据集的格式，合并为一个文件，最终获得包含<strong>15293</strong>条有效推文的数据集文件，以下是该文件的部分样例</p>
+<p>&lsquo;&lsquo;&lsquo;json
+[
+{
+&ldquo;text&rdquo;: &ldquo;President Donald J. Trump and Melania Participate in the Pardoning of the National Thanksgiving Turkey at the White House.&rdquo;
+},
+{
+&ldquo;text&rdquo;: &ldquo;Today we continued a wonderful American Tradition at the White House. Drumstick and Wishbone will live out their days in the beautiful Blue Ridge Mountains at Gobblers Rest&hellip;&rdquo;
+}
+]
+'&rsquo;&rsquo;</p>
+<h3 id="指令微调数据集">
+  指令微调数据集
+  <a class="anchor" href="#%e6%8c%87%e4%bb%a4%e5%be%ae%e8%b0%83%e6%95%b0%e6%8d%ae%e9%9b%86">#</a>
+</h3>
+<h4 id="interview">
+  Interview
+  <a class="anchor" href="#interview">#</a>
+</h4>
+<p>采访数据的方式同Speech，分别为 Trump_Campaign_Corpus 和 
+  <a href="http://www.presidency.ucsb.edu">www.presidency.ucsb.edu</a></p>
+<p>针对 Trump_Campaign_Corpus 的初步格式化数据，我们自己设计制作二次格式化程序，将其制作为符合模型训练格式的数据集；并用爬虫获取 
+  <a href="http://www.presidency.ucsb.edu">www.presidency.ucsb.edu</a> 中特朗普在第一任期的采访内容。</p>
+<p>针对 Trump_Campaign_Corpus 的初步格式化数据，我们在基本的指令微调格式上添加了多轮对话。</p>
+<p><strong>构建对话记录</strong>：每个对话记录是一个字典，包含以下字段：</p>
+<ul>
+<li>
+<p>' &ldquo;instruction&rdquo; &lsquo;: 提问内容。</p>
+</li>
+<li>
+<p>' &ldquo;output&rdquo; &lsquo;: 回答内容。</p>
+</li>
+<li>
+<p>' &ldquo;history&rdquo; &lsquo;: 上一轮对话的历史记录，如果是第一轮对话则为空列表。</p>
+</li>
+</ul>
+<p>处理之后，对于原文件：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+MODERATOR: What is your plan for the economy?
+DONALD TRUMP: We will focus on creating jobs and reducing taxes.
+MODERATOR: How do you plan to achieve this?
+DONALD TRUMP: By cutting regulations and promoting business growth.
+'&rsquo;&rsquo;</p>
+<p>处理后得到：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+[
+{
+&ldquo;instruction&rdquo;: &ldquo;What is your plan for the economy?&rdquo;,
+&ldquo;output&rdquo;: &ldquo;We will focus on creating jobs and reducing taxes.&rdquo;,
+&ldquo;history&rdquo;: []
+},
+{
+&ldquo;instruction&rdquo;: &ldquo;How do you plan to achieve this?&rdquo;,
+&ldquo;output&rdquo;: &ldquo;By cutting regulations and promoting business growth.&rdquo;,
+&ldquo;history&rdquo;: [
+[&ldquo;What is your plan for the economy?&rdquo;, &ldquo;We will focus on creating jobs and reducing taxes.&quot;]
+]
+}
+]
+'&rsquo;&rsquo;</p>
+<h4 id="identity">
+  Identity
+  <a class="anchor" href="#identity">#</a>
+</h4>
+<p>我们以人工合成的方法制作了总计1209条Identity数据集，我们使用ChatCPT-4o模拟特朗普的语言风格回答一些简单问题（目的仅是让模型能够清晰的明白自己是谁，自己的身份与态度）</p>
+<p>比如对于简单的打招呼的回应：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+Q: Who are you?
+A: I&rsquo;m Donald Trump, a winner in business and politics. People know me worldwide for my success.
+Q: What is your name?
+A: The name&rsquo;s Donald Trump—iconic, strong, and unforgettable.
+'&rsquo;&rsquo;</p>
+<p>我们想到，作为总统，那总不可能有问必答，有一些非常无厘头的问题我们需要特朗普能够以总统身份委婉的拒绝回答：(什么？你问我为什么鸡要横穿马路？我怎么知道！)</p>
+<p>&lsquo;&lsquo;&lsquo;json
+Q: Why did the chicken cross the road?
+A: Look, I’m not going to get into chicken politics. It crossed the road, probably because it wanted to make a big move. But let’s just say, it’s a big deal. Big things happening.
+Q: Why are astronauts always so calm?
+A: You know, I don’t really have time to discuss astronauts’ calmness. They’re doing great work, though, really great. Maybe ask NASA, they’re the experts.
+'&rsquo;&rsquo;</p>
+<p>我们都知道，美国总统大选是最近的事情，可是我们的数据集中没有关于2024美国大选的材料，如果你问他今年美国大选的事他不就露陷了嘛？所以我们也合成一些基础问题，包括但不限于：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+Q: Did you win the 2024 U.S. presidential election?
+A: Well, let’s just say a lot of people think I did. The American people know we’re stronger with me in charge. The movement is bigger than ever, and the results speak for themselves.
+Q: What’s your message to undecided voters in 2024?
+A: My message is simple: I’ll fight for you. I’ll bring back jobs, secure the border, and make America strong again. Look at my record—you’ll see results.
+'&rsquo;&rsquo;</p>
+<p>清洗结果示例如下：</p>
+<p>图3</p>
+<h2 id="模型训练">
+  模型训练
+  <a class="anchor" href="#%e6%a8%a1%e5%9e%8b%e8%ae%ad%e7%bb%83">#</a>
+</h2>
+<h3 id="工具依赖和前置准备">
+  工具、依赖和前置准备
+  <a class="anchor" href="#%e5%b7%a5%e5%85%b7%e4%be%9d%e8%b5%96%e5%92%8c%e5%89%8d%e7%bd%ae%e5%87%86%e5%a4%87">#</a>
+</h3>
+<h4 id="llama-factory">
+  LLaMA-Factory
+  <a class="anchor" href="#llama-factory">#</a>
+</h4>
+<p>在模型训练上，我们选择了LLaMA-Factory作为模型训练的工具。这个选择其一是因为它提供了较多的功能，支持的模型、算法和框架都较为丰富；其二是因为它提供了web-ui的可视化操作界面，在不熟悉命令行操作的情况下能够有效降低操作门槛和学习成本。</p>
+<blockquote>
+<p>项目GitHub连接：https://github.com/hiyouga/LLaMA-Factory/tree/main</p>
+</blockquote>
+<p>LLaMA-Factory提供了双语的readme.md文件，以及自建的文档网站：https://llamafactory.readthedocs.io/zh-cn/latest/index.html。我们建议在上手操作前详细阅读该项目的文档，至少读完项目使用的相关部分；不然可能会踩很多坑。</p>
+<h4 id="hugging-face">
+  Hugging Face
+  <a class="anchor" href="#hugging-face">#</a>
+</h4>
+<p>Hugging Face是一家专注于自然语言处理（NLP）和人工智能（AI）的公司。它提供了一个开源平台，允许研究人员和开发者共享和使用各种预训练的机器学习模型，尤其是其著名的Transformers库，该库支持多种深度学习框架如PyTorch和TensorFlow等。</p>
+<p>在我们的项目过程中，原模型（LLama 3.1）的拉取是在Hugging Face上进行的。此外出于<strong>开源精神</strong>，我们也打算将训练好的模型上传至Hugging Face公开。</p>
+<blockquote>
+<p>
+  <a href="https://huggingface.co/Frandiex/llama-trump-v1">https://huggingface.co/Frandiex/llama-trump-v1</a>（这是我们最开始版本）</p>
+</blockquote>
+<p>如果想要深入人工智能、大模型和机器学习，我们强烈建议注册Hugging Face账号。学习大模型不用Hugging Face，就好比程序员不用GitHub</p>
+<h4 id="modelscope">
+  ModelScope
+  <a class="anchor" href="#modelscope">#</a>
+</h4>
+<p>训练模型是一件十分耗费时间和算力资源的事，我们在一开始尝试使用个人设备进行训练，测试设备为：</p>
+<blockquote>
+<p>华硕天选3笔记本，16GB内存 + RTX 3060 laptop 6GB显存</p>
+<p>Apple Macbook Air M2 16GB</p>
+<p>Apple Mac mini M4 16GB</p>
+</blockquote>
+<p>但时间成本基本难以接受。因此我们决定转向使用云平台资源完成任务。此外，因为某些原因，一些同学在国内访问Hugging Face等网站进行模型拉取或pull文件时是有困难的，需要一个国内的镜像资源替代。</p>
+<p><strong>ModelScope</strong>是由阿里巴巴达摩院推出的开源模型即服务（MaaS）平台，旨在为AI开发者提供一个灵活、易用且低成本的一站式模型服务。</p>
+<p>在当前时间点注册，ModelScope一共赠送了100小时的GPU实例。分别为36小时搭载Nvidia A10（24GB显存）和64小时搭载Nvidia T4（16GB显存）的GPU实例</p>
+<blockquote>
+<p>在我们的使用过程中，发现有如下值得注意⚠️的点：</p>
 </blockquote>
 <blockquote>
-<p>下面是提交代码的范例：</p>
-<pre tabindex="0"><code>import pandas as pd
-import numpy as np
-
-# solution 是你⾃⼰模型的预测结果, 我这⾥随机⽣成的⼀个预测结果
-solution = np.random.randint(10, size=23403)
-
-# 下⾯代码会⽣成提交的⽂件, 将numpy⽂件转换成csv⽂件
-pd.DataFrame({'Id':range(len(solution)), &gt;'Category':solution}).to_csv('solution.csv',
-index=False)
-
-# 查看预测结果, 检查提交格式是否正确
-pd.read_csv('solution.csv')
-</code></pre></blockquote>
-<p><strong>考核标准</strong>:</p>
+<blockquote>
+<p>首先只有PAI-DSW实例具有持续化存储，而EAIS是没有的。换句话说，使用PAI-DSW实例时我们可以将自己需要长期存储的项目和文件存储在workspace文件中，这样下一次打开时就可以接着使用，就像用自己的电脑一样。</p>
+<p>EAIS则不支持持续化存储，无法持续存储项目文件。就像学校机房的电脑，每次重启都会回到一个预设状态，不会保存上一次的使用痕迹和文件。</p>
+<p>而模型训练是一个时间跨度很长的项目。针对这个任务，我们建议只使用PAI-DSW实例，而不使用EAIS实例（即使可以白嫖）。如果时间不够，则自行前往阿里云购买PAI-DSW的商业版本。</p>
+<p>其次CPU环境和GPU环境是互通的，因此我们强烈建议，在进行相关依赖安装、项目部署、上传、下载文件以及参数配置等操作时使用CPU实例。只在训练时使用GPU实例，这样可以节约很多GPU的时间额度。</p>
+</blockquote>
+</blockquote>
+<h4 id="ollama">
+  Ollama
+  <a class="anchor" href="#ollama">#</a>
+</h4>
+<p>Ollama是一个开源框架，是llama.cpp的下游项目，旨在简化在本地运行大型语言模型（LLM）的过程。让你在自己的计算机上轻松部署和管理多种开源模型。</p>
+<p>我们训练和导出的模型都是Safetensors格式（Hugging Face开发的一种模型格式）的。而为了便于将训练好的模型打包并接入到自己的项目中，我们选择通过llama.cpp将模型转换为GGUF格式，然后导入至Ollama使用。</p>
+<blockquote>
+<p>ollama run Frandy/llamatrump-v1.1(要运行直接终端输入,这是我们目前最新的版本)</p>
+</blockquote>
+<blockquote>
+<p>如果你在使用这些项目的过程中遇到了问题，我们建议的解决顺序为：</p>
 <ol>
 <li>
-<p>最终成绩的40%以提交测试集数据的预测标签的准确率为标准。最高准确率的小组得到满分40分，其它小组按照归一化之后的比例得分。</p>
+<p>优先查看官方文档📄，包括但不限于readme.md文档，官方文档库</p>
 </li>
 <li>
-<p>最终成绩的60%由程序说明文档为准。能够说明程序思路，简明扼要，逻辑清晰的文档可以得到满分60分。</p>
+<p>查看项目的issue或者官方社区。到达这一步一般可以解决90%以上的问题</p>
 </li>
 <li>
-<p>一份程序说明报告，介绍基本思路和程序结构。要求简单清晰，字数不限（请不要特意增加篇幅，以简单清晰为主）。请在报告的后面附上小组成员分工。</p>
+<p>使用Ai搜索🔍引擎进行查找</p>
 </li>
 <li>
-<p>每个小组只提交一份结果，包括标签文件、原始程序和程序说明报告（PDF 和 WORD 都需要）分三部分。请把文件打包命名为“姓名_队伍名称_小组编号.zip”，例如张三李四王五_北京五道口_32.zip。</p>
+<p>直接Google</p>
 </li>
 <li>
-<p>请在指定时间内将结果提交至 
-  <a href="mailto:xxwu.eesissi@szu.edu.cn">xxwu.eesissi@szu.edu.cn</a></p>
+<p>直接问AI（许多问题都与版本具有强相关性，即许多问题都具有较强时效性，因此非原理性问题不建议直接询问不联网的大模型）</p>
 </li>
 <li>
-<p>Deadline: 2021 年 7 月 2 号 11.59 am</p>
+<p>重复🔁上述过程，直至精疲力竭😥</p>
+</li>
+<li>
+<p>先睡一觉😴（如果上述无法解决）</p>
 </li>
 </ol>
-<h2 id="课件下载">
-  课件下载
-  <a class="anchor" href="#%e8%af%be%e4%bb%b6%e4%b8%8b%e8%bd%bd">#</a>
-</h2>
-<h3 id="第一-二周">
-  第一, 二周
-  <a class="anchor" href="#%e7%ac%ac%e4%b8%80-%e4%ba%8c%e5%91%a8">#</a>
+</blockquote>
+<h3 id="模型选择">
+  模型选择
+  <a class="anchor" href="#%e6%a8%a1%e5%9e%8b%e9%80%89%e6%8b%a9">#</a>
 </h3>
-<p>content:</p>
-<ul>
-<li>Data cleaning.pdf</li>
-<li>emsenble learning.pdf</li>
-<li>catboost.pdf</li>
-<li>classfication code</li>
-<li>data cleaning code</li>
-</ul>
-<p>链接: 
-  <a href="https://pan.baidu.com/s/11T1Pqk4qBNI4WKCW_5rSoQ">https://pan.baidu.com/s/11T1Pqk4qBNI4WKCW_5rSoQ</a>  密码: p58d</p>
-<h3 id="第三周">
-  第三周
-  <a class="anchor" href="#%e7%ac%ac%e4%b8%89%e5%91%a8">#</a>
+<p>本次项目使用的基座模型为LLama 3.1 8B版本。</p>
+<p>LLama 3.1是Meta公司今年7月发布的开源大模型，在超过15万亿个标记上进行训练，使用了超过16,000个H100 GPU进行优化。具有非常优秀的基础性能，模版较为规整，社区资源丰富，非常适合拿来微调。</p>
+<p>我们在选择的过程中对比了10B参数以内的四个主流系列模型：LLama、Qwen、Phi和Mistral，考虑到我们使用英文进行训练，且符合模型厂商的政治立场（不知道考虑这个是否有影响😶），以及一些对话测试，最终决定选择LLama</p>
+<p>同时，我们为了平衡模型性能与我们资源水平，我们最终选择了8B版本。</p>
+<blockquote>
+<p>llama 3.1有三个版本，405B、70B和8B</p>
+</blockquote>
+<h3 id="部署与配置">
+  部署与配置
+  <a class="anchor" href="#%e9%83%a8%e7%bd%b2%e4%b8%8e%e9%85%8d%e7%bd%ae">#</a>
 </h3>
-<p>content:</p>
-<ul>
+<h4 id="环境">
+  环境
+  <a class="anchor" href="#%e7%8e%af%e5%a2%83">#</a>
+</h4>
+<p>如果你使用带有Nvidia GPU的个人电脑来部署LLaMA-Factory，且你计划使用GPU，那么在开始前你需要先安装CUDA，CUDA是英伟达创建的一个并行计算平台和编程模型，它让开发者可以使用 NVIDIA 的 GPU 进行高性能的并行计算。CUDA的安装过程这里不再赘述。</p>
+<p>如果你使用的是ModelScope提供的GPU云实例，那么可以跳过这一点（ModelScope已经安装好了CUDA）</p>
+<p>/mnt/workspace 是主目录，也是示例持久化保存文件的目录。建议直接在这个目录下进行操作。</p>
+<p>接下来强烈建议在这里创建一个python虚拟环境，而不是使用示例自带的环境。因为：</p>
+<blockquote>
+<ol>
 <li>
-<p>uber data processing.pdf    链接: 
-  <a href="https://pan.baidu.com/s/10GB0B5I0miej5rGYXnYoJg">https://pan.baidu.com/s/10GB0B5I0miej5rGYXnYoJg</a>  密码: gi2d</p>
+<p>LLaMA-Factory的依赖项非常多，而且对版本要求较高（很容易版本冲突），而ModelScope的实例自带了许多版本不一的机器学习相关python库。因此最好选择创建一个干净的虚拟环境来从0安装依赖项</p>
 </li>
 <li>
-<p>uber program   链接: 
-  <a href="https://pan.baidu.com/s/1ETcU7vmUBkRUyO-Req5b2w">https://pan.baidu.com/s/1ETcU7vmUBkRUyO-Req5b2w</a>  密码: 7wot</p>
+<p>如果全局安装依赖，由于ModelScope实例存储python库的位置不在workspace持久化存储目录下，你每次安装的依赖都会在关闭实例后被清除，下次启动需要重新安装配置；而如果使用workspace目录下的虚拟环境，可以持久存储我们的依赖项，大大减少重新配置的时间。</p>
 </li>
-</ul>
-<h3 id="第四周">
-  第四周
-  <a class="anchor" href="#%e7%ac%ac%e5%9b%9b%e5%91%a8">#</a>
-</h3>
-<p>content:</p>
-<ul>
-<li>SIR.pdf      链接: 
-  <a href="https://pan.baidu.com/s/1Kqqk1aStrGUBxHBqa9iGkQ">https://pan.baidu.com/s/1Kqqk1aStrGUBxHBqa9iGkQ</a>  密码: c3b4</li>
-</ul>
+</ol>
+</blockquote>
+<p>不同平台和终端对于python虚拟环境有所不同，这里的指令适用Linux
+如果你不熟悉python虚拟环境，可以在这个网址看一看</p>
+<blockquote>
+<p>
+  <a href="https://www.freecodecamp.org/chinese/news/how-to-setup-virtual-environments-in-python/">https://www.freecodecamp.org/chinese/news/how-to-setup-virtual-environments-in-python/</a></p>
+</blockquote>
+<h4 id="部署">
+  部署
+  <a class="anchor" href="#%e9%83%a8%e7%bd%b2">#</a>
+</h4>
+<p>接下来我们将LLaMA-Factory拉取至本地（自己的设备）</p>
+<p>&lsquo;&lsquo;&lsquo;bash
+git clone &ndash;depth 1 
+  <a href="https://github.com/hiyouga/LLaMA-Factory.git">https://github.com/hiyouga/LLaMA-Factory.git</a>
+cd LLaMA-Factory
+'&rsquo;&rsquo;</p>
+<p>接下来我们需要安装项目的依赖项，确认终端路径转到 /workspace/LLaMA-Factory 之后，使用以下命令安装：</p>
+<p>&lsquo;&lsquo;&lsquo;bash
+pip install -e &ldquo;.[torch,metrics]&rdquo;
+'&rsquo;&rsquo;</p>
+<blockquote>
+<p>如果你碰到了环境冲突，请尝试使用 &lsquo;pip install &ndash;no-deps -e .&rsquo; 解决（如果使用干净的虚拟环境一般不会碰到）</p>
+</blockquote>
+<p>关于依赖版本，如果你在使用过程中遇到了关于依赖项的报错，可以优先尝试卸载重装官方推荐的版本：</p>
+<p>&lsquo;&lsquo;&lsquo;json
+Optional      Minimum   Recommend
+CUDA          11.6      12.2
+deepspeed     0.10.0    0.14.0
+bitsandbytes  0.39.0    0.43.1
+vllm          0.4.3     0.5.0
+flash-attn    2.3.0     2.6.3
+'&rsquo;&rsquo;</p>
+<p>&lsquo;&lsquo;&lsquo;json
+Mandatory     Minimum   Recommend
+python        3.8       3.11
+torch         1.13.1    2.4.0
+transformers  4.41.2    4.43.4
+datasets      2.16.0    2.20.0
+accelerate    0.30.1    0.32.0
+peft          0.11.1    0.12.0
+trl           0.8.6     0.9.6
+'&rsquo;&rsquo;</p>
+<blockquote>
+<p>这个版本推荐来自于撰文时的官方文档，实际请以LLaMA-Factory官方的Readme为准</p>
+</blockquote>
+<p>上述过程完成之后，我们使用下面的命令来检查LLaMA-Factory是否安装成功</p>
+<p>&lsquo;&lsquo;&lsquo;bash
+llamafactory-cli version
+'&rsquo;&rsquo;</p>
+<p>图4</p>
+<blockquote>
+<p>如果出现如图的版本信息，那么恭喜你，部署成功了</p>
+</blockquote>
 </article>
  
       
@@ -395,12 +626,23 @@ pd.read_csv('solution.csv')
   <ul>
     <li><a href="#artificial-intelligence-and-machine-learning">Artificial Intelligence and Machine Learning</a>
       <ul>
-        <li><a href="#人工智能与机器学习">人工智能与机器学习</a></li>
-        <li><a href="#课件下载">课件下载</a>
+        <li><a href="#人工智能与机器学习">人工智能与机器学习</a>
           <ul>
-            <li><a href="#第一-二周">第一, 二周</a></li>
-            <li><a href="#第三周">第三周</a></li>
-            <li><a href="#第四周">第四周</a></li>
+            <li><a href="#课题背景">课题背景</a></li>
+          </ul>
+        </li>
+        <li><a href="#数据集收集清洗与训练">数据集收集，清洗与训练</a>
+          <ul>
+            <li><a href="#数据来源">数据来源</a></li>
+            <li><a href="#预训练数据集">预训练数据集</a></li>
+            <li><a href="#指令微调数据集">指令微调数据集</a></li>
+          </ul>
+        </li>
+        <li><a href="#模型训练">模型训练</a>
+          <ul>
+            <li><a href="#工具依赖和前置准备">工具、依赖和前置准备</a></li>
+            <li><a href="#模型选择">模型选择</a></li>
+            <li><a href="#部署与配置">部署与配置</a></li>
           </ul>
         </li>
       </ul>
