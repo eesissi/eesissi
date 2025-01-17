@@ -299,13 +299,13 @@ DONALD TRUMP: We will focus on creating jobs and reducing taxes.
 <p><strong>构建对话记录</strong>：每个对话记录是一个字典，包含以下字段：</p>
 <ul>
 <li>
-<p>' &ldquo;instruction&rdquo; &lsquo;: 提问内容。</p>
+<p><code>&quot;instruction&quot;</code>: 提问内容。</p>
 </li>
 <li>
-<p>' &ldquo;output&rdquo; &lsquo;: 回答内容。</p>
+<p><code>&quot;output&quot;</code>: 回答内容。</p>
 </li>
 <li>
-<p>' &ldquo;history&rdquo; &lsquo;: 上一轮对话的历史记录，如果是第一轮对话则为空列表。</p>
+<p><code>&quot;history&quot;</code>: 上一轮对话的历史记录，如果是第一轮对话则为空列表。</p>
 </li>
 </ul>
 <p>处理之后，对于原文件：</p>
@@ -456,7 +456,7 @@ A: My message is simple: I’ll fight for you. I’ll bring back jobs, secure th
 </h4>
 <p>如果你使用带有Nvidia GPU的个人电脑来部署LLaMA-Factory，且你计划使用GPU，那么在开始前你需要先安装CUDA，CUDA是英伟达创建的一个并行计算平台和编程模型，它让开发者可以使用 NVIDIA 的 GPU 进行高性能的并行计算。CUDA的安装过程这里不再赘述。</p>
 <p>如果你使用的是ModelScope提供的GPU云实例，那么可以跳过这一点（ModelScope已经安装好了CUDA）</p>
-<p>/mnt/workspace 是主目录，也是示例持久化保存文件的目录。建议直接在这个目录下进行操作。</p>
+<p><code>/mnt/workspace</code> 是主目录，也是示例持久化保存文件的目录。建议直接在这个目录下进行操作。</p>
 <p>接下来强烈建议在这里创建一个python虚拟环境，而不是使用示例自带的环境。因为：</p>
 <blockquote>
 <ol>
@@ -487,13 +487,13 @@ cd LLaMA-Factory
 <p>如果你碰到了环境冲突，请尝试使用 &lsquo;pip install &ndash;no-deps -e .&rsquo; 解决（如果使用干净的虚拟环境一般不会碰到）</p>
 </blockquote>
 <p>关于依赖版本，如果你在使用过程中遇到了关于依赖项的报错，可以优先尝试卸载重装官方推荐的版本：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Optional</span>      <span style="color:#960050;background-color:#1e0010">Minimum</span>   <span style="color:#960050;background-color:#1e0010">Recommend</span>
-<span style="color:#960050;background-color:#1e0010">CUDA</span>          <span style="color:#ae81ff">11.6</span>      <span style="color:#ae81ff">12.2</span>
-<span style="color:#960050;background-color:#1e0010">deepspeed</span>     <span style="color:#ae81ff">0.10</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0.14</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>
-<span style="color:#960050;background-color:#1e0010">bitsandbytes</span>  <span style="color:#ae81ff">0.39</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0.43</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">1</span>
-<span style="color:#960050;background-color:#1e0010">vllm</span>          <span style="color:#ae81ff">0.4</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">3</span>     <span style="color:#ae81ff">0.5</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>
-<span style="color:#960050;background-color:#1e0010">flash-attn</span>    <span style="color:#ae81ff">2.3</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">0</span>     <span style="color:#ae81ff">2.6</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#ae81ff">3</span>
-</code></pre></div><pre tabindex="0"><code>Mandatory     Minimum   Recommend
+<pre tabindex="0"><code>Optional      Minimum   Recommend
+CUDA          11.6      12.2
+deepspeed     0.10.0    0.14.0
+bitsandbytes  0.39.0    0.43.1
+vllm          0.4.3     0.5.0
+flash-attn    2.3.0     2.6.3
+</code></pre><pre tabindex="0"><code>Mandatory     Minimum   Recommend
 python        3.8       3.11
 torch         1.13.1    2.4.0
 transformers  4.41.2    4.43.4
@@ -518,7 +518,7 @@ trl           0.8.6     0.9.6
 <p>首先，需要安装Hugging Face的指令依赖并登录：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pip install --upgrade huggingface_hub
 huggingface-cli login
-</code></pre></div><p>然后拉取需要的模型，&rsquo; download &lsquo;后更换为自己要下载的模型ID，&rsquo; local-dir ' 则为下载路径</p>
+</code></pre></div><p>然后拉取需要的模型，' download &lsquo;后更换为自己要下载的模型ID，&rsquo; local-dir ' 则为下载路径</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">huggingface-cli download --resume-download meta-llama/Llama-3.1-8B --local-dir LLaMA-Factory/model
 </code></pre></div><blockquote>
 <p>Hugging face的使用有一定网络要求，如果你没有设置网络代理的条件，可以考虑设置国内镜像站：https://hf-mirror.com/ 在该网站查看详情；或者直接使用Model Scope的模型拉取服务</p>
@@ -527,6 +527,21 @@ huggingface-cli login
   数据集准备
   <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e9%9b%86%e5%87%86%e5%a4%87">#</a>
 </h4>
+<p>首先我们需要把所有准备好的数据集文件移至 LLaMA-Factory/data 目录下，这非常简单，就是简单的移动，没有任何复杂操作。</p>
+<p>麻烦的地方在于，我们需要为每个数据集文件“注册”，这样我们才能在LLaMA-Factory中使用它们。</p>
+<p>首先需要找到<code>dataset_info.json</code> 文件，它类似于是LLaMA-Factory所有数据集的一个注册表。
+用编辑器打开这个文件，然后添加数据集的描述信息。</p>
+<p>对于指令微调格式数据集，应该在其中添加如下格式描述：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;数据集名称&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {  <span style="color:#f92672">&#34;file_name&#34;</span>: <span style="color:#e6db74">&#34;data.json&#34;</span>,  <span style="color:#f92672">&#34;columns&#34;</span>: {    <span style="color:#f92672">&#34;prompt&#34;</span>: <span style="color:#e6db74">&#34;instruction&#34;</span>,    <span style="color:#f92672">&#34;query&#34;</span>: <span style="color:#e6db74">&#34;input&#34;</span>,    <span style="color:#f92672">&#34;response&#34;</span>: <span style="color:#e6db74">&#34;output&#34;</span>,    <span style="color:#f92672">&#34;system&#34;</span>: <span style="color:#e6db74">&#34;system&#34;</span>,    <span style="color:#f92672">&#34;history&#34;</span>: <span style="color:#e6db74">&#34;history&#34;</span>  }}
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;数据集名称&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {  <span style="color:#f92672">&#34;file_name&#34;</span>: <span style="color:#e6db74">&#34;data.json&#34;</span>,  <span style="color:#f92672">&#34;columns&#34;</span>: {    <span style="color:#f92672">&#34;prompt&#34;</span>: <span style="color:#e6db74">&#34;text&#34;</span>  }}
+</code></pre></div><blockquote>
+<p>不同的数据集格式不同，碍于篇幅，完整格式介绍请前往 
+  <a href="https://llamafactory.readthedocs.io/zh-cn/latest/getting_started/data_preparation.html">https://llamafactory.readthedocs.io/zh-cn/latest/getting_started/data_preparation.html</a> 参考</p>
+</blockquote>
+<blockquote>
+<p>如果你总是遇到格式报错，不妨看看示例数据集，找找与你的数据集格式相近的，在 dataset_info.json 复制它们的描述信息，然后在此基础上修改。</p>
+<p>另外在文件末尾添加描述时，别忘了最后一段描述是没有逗号的，如果采用复制的方式，有时会需要注意删除逗号（因为中部的每段都有逗号）</p>
+</blockquote>
 </article>
  
       
